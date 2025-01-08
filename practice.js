@@ -44,9 +44,20 @@ const caesarCypher = (string, key) => {
     return test.join("")
 }
 
+const analyze = (array) => {
+ return  {
+    average: array.reduce((a,b) => a + b, 0) / array.length,
+    min: array.sort()[0],
+    max: array[array.length - 1],
+    length: array.length
+}
+}
+
 module.exports = {
   capitalize,
   reverseString,
   calculator,
   caesarCypher,
+  analyze
 };
+
